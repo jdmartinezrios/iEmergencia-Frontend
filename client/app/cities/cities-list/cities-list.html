@@ -1,0 +1,20 @@
+  <table class="Table">
+    <thead class="Table-header">
+      <tr class="Table-rowHeader">
+        <th class="Table-itemHeader">Id</th>
+        <th class="Table-itemHeader">Codigo</th>
+        <th class="Table-itemHeader">Nombre</th>
+        <th class="Table-itemHeader">Departamento</th>
+        <th class="Table-itemHeader">Pais</th>
+      </tr>
+    </thead>
+    <tbody class="Table-body">
+      <tr class="Table-rowBody" ng-repeat="item in vm.cities">
+        <td class="Table-itemBody">{{item.id}}</td>
+        <td class="Table-itemBody">{{item.cod}}</td>
+        <td class="Table-itemBody">{{item.nombre}}</td>
+        <td class="Table-itemBody">{{item.departamento.nombre}}</td>
+        <td class="Table-itemBody">{{item.departamento.pais.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>

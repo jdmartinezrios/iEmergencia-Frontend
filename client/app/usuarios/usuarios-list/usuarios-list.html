@@ -1,0 +1,38 @@
+<div class="Table wrap">
+  <table class="Table">
+    <thead class="Table-header">
+      <tr class="Table-rowHeader">
+        <th class="Table-itemHeader">Id</th>
+        <th class="Table-itemHeader">Nombre</th>
+        <th class="Table-itemHeader">Apellido</th>
+        <th class="Table-itemHeader">Email</th>
+        <th class="Table-itemHeader">Tipo de Documento</th>
+        <th class="Table-itemHeader">N.Documento</th>
+        <!--<th class="Table-itemHeader">Sexo</th>-->
+        <th class="Table-itemHeader">Activo</th>
+        <th class="Table-itemHeader">Ciudad</th>
+        <th class="Table-itemHeader">Departamento</th>
+        <th class="Table-itemHeader">Pais</th>
+        <th class="Table-itemHeader">Accion</th>
+      </tr>
+    </thead>
+    <tbody class="Table-body">
+      <tr class="Table-rowBody" ng-repeat="item in vm.arreglo">
+        <td class="Table-itemBody">{{item.id}}</td>
+        <td class="Table-itemBody">{{item.firtsName}}</td>
+        <td class="Table-itemBody">{{item.lastName}}</td>
+        <td class="Table-itemBody">{{item.email}}</td>
+        <td class="Table-itemBody">{{item.documentType.description}}</td>
+        <td class="Table-itemBody">{{item.documentNumber}}</td>
+        <!--<td class="Table-itemBody">{{item.sexo}}</td>-->
+        <td class="Table-itemBody">{{item.active}}</td>
+        <td class="Table-itemBody">{{item.citie.name}}</td>
+        <td class="Table-itemBody">{{item.citie.departament.name}}</td>
+        <td class="Table-itemBody">{{item.citie.departament.countrie.name}}</td>
+        <td class="Table-itemBody">
+          <a ui-sref="usuarios-update({idUser:item.id})" class="btn btn-primary">Editar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

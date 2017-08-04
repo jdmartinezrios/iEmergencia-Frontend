@@ -1,0 +1,161 @@
+.Header
+  width 100%
+  overflow hidden
+  background #32A3FF
+  position fixed
+  box-shadow 2px 2px 8px rgba(0, 0, 0, 0.5)
+  z-index 2000
+  &-top
+    background-color #7EC5FF
+    text-align right
+    padding-right 5em
+    height 3em
+  &-topLink
+    line-height 2.5em
+    color white
+    font-size 16px
+    padding 6px 30px
+    margin-left 10px
+    border 1px solid rgba(255,255,255,0.3)
+    border-radius 5px
+  &-topLink:link
+    text-decoration none
+
+#LoginButton
+  background-color rgba(255,255,255,0.3)
+
+#LoginButtonhover
+  transition 0.3s
+  background-color white
+  color #7EC5FF
+
+#RegisterButton:hover
+  transition 0.3s
+  background-color white
+  color #7EC5FF
+
+.Navbar
+  width 90%
+  max-width 1500px
+  margin auto
+  overflow hidden
+  -webkit-transition all 0.8s ease
+  -o-transition all 0.8s ease
+  transition all 0.8s ease
+  &-list
+    padding-top 12px
+    text-align right
+    margin 0
+  &-item
+    color #ffffff
+    padding:10px 5px
+    font-size 17px
+    font-weight normal
+    display inline-block
+  &-link
+    transition 0.35s
+    color #ffffff
+    font-size 20px
+    text-decoration none
+    padding 0 10px
+  &-link:link
+    text-decoration none
+  &-link:hover
+    background-color #ffffff
+    color #32A3FF
+    padding 24px 10px
+  &-link:active
+    text-decoration none
+  &-logotype
+    color #fff
+    font-size 45px
+    font-weight bold
+    line-height 70px
+    float left
+  &-logotypeTitle
+    color  white
+    font-family 'Montserrat', sans-serif
+  &-logotypeTitle:link
+    text-decoration none
+  &-logotypeTitle:visited
+    color #ffffff
+  &-barra
+    font-size 30px
+    color #fff
+    background #32a3ff
+    border-style none
+    display none
+    cursor pointer
+
+.fa-info-circle
+  font-size  1.2em
+  color #FF6437
+
+//Responsive Design
+@media screen and (max-width:1060px)
+  .Navbar
+    display flex
+    flex-direction column
+    align-items center
+    &-logotype
+      display block
+    &-list
+      padding-left 0
+    &-link:hover
+      background #fff
+      color #32A3FF
+      padding 15px 10px 15px 10px
+@media screen and (max-width:767px)
+  .Navbar
+    max-width 100%
+    width 100%
+    text-align left
+    margin 0 auto
+    &-logotype
+      width 100%
+      display block
+    &-logotype>i
+      margin-left 0.2em
+    &-barra
+      display inline-block
+      position absolute
+      margin-top 0.65em
+      margin-right 0.2em
+      right 0
+    &-item
+      padding 0
+      text-align left
+      overflow hidden
+      width 100%
+      display block
+      border-top 1px solid #ea8569
+      border-bottom 1px solid #ea8569
+      background #ff6437
+    &-list
+      width 100%
+      padding-top 0
+    &-link
+       display block
+       transition 0s
+       width 100%
+    &-link:hover
+      background none
+      color #fff
+      padding 0px 10px
+    &-link:hover
+      transition 0.5s
+      background #ea8569
+@media screen and (max-width:405px)
+  .Navbar-logotypeTitle,.fa-info-circle
+    font-size 70%
+    position relative
+    bottom 4.5px
+  .Navbar-logotype
+    height 1.6em
+@media screen and (max-width:385px)
+  .Header-top
+     padding-right 0
+     text-align center
+@media screen and (max-width:298px)
+  .Header-top
+    height 6em

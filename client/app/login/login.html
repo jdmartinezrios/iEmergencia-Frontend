@@ -1,0 +1,18 @@
+<section class="Login">
+  <form class="Login-form" name="userForm">
+    <p class="Login-formLogotype">🏥</p>
+    <h2 class="Login-formTitle">Iniciar Sesión</h2>
+    <input class="Login-formInput" type="text" placeholder="NIT o N° de Documento" name="numDocument" ng-model="vm.user.documentNumber"
+      ng-pattern="/^[0-9]*$/" minlenght="5" maxlength="15" required>
+      <span class="Error-formMessage" ng-show="userForm.numDocument.$error.pattern">Este campo solo admite numeros.</span>
+      <span class="Error-formMessage" ng-show="userForm.numDocument.$touched && userForm.numDocument.$invalid">Debe ingresar un numero de documento.</span>
+    <input class="Login-formInput" type="password" placeholder="Contraseña" name="password" ng-model="vm.user.password" required>
+    <span class="Error-formMessage" ng-show="userForm.password.$touched && userForm.password.$invalid">Debe ingresar una contraseña.</span>
+    <button class="Login-formButton" type="submit" ng-click="vm.login()">Iniciar Sesión</button>
+    <a class="Login-formRecover" ui-sref="contactUs">¿Olvidaste tu contraseña?</a>
+    <div class="Login-formBottom">
+      <p class="Login-formInfo">¿Necesitas una cuenta?</p>
+      <a class="Login-formLink" ui-sref="usuarios-create">Registrate</a>
+    </div>
+  </form>
+</section>

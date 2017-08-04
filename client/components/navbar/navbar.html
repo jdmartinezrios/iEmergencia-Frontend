@@ -1,0 +1,20 @@
+<div class="Header" ng-controller="NavbarController">
+  <div class="Header-top">
+    <a id="LoginButton" class="Header-topLink" ui-sref="login">Ingresar</a>
+    <a id="RegisterButton" class="Header-topLink" ui-sref="usuarios-create">Regístrate</a>
+  </div>
+  <div class="Navbar">
+    <div class="Navbar-logotype">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <a class="Navbar-logotypeTitle" ui-sref="main" title="Logo iEmergencias">Emergencia</a>
+      <button class="fa fa-bars Navbar-barra" ng-click="nav.isCollapsed = !nav.isCollapsed"></button>
+    </div>
+    <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse " id="navbar-main">
+    <ul class="Navbar-list">
+      <li class="Navbar-item" ng-repeat="item in nav.menu" ui-sref-active="active">
+          <a class="Navbar-link" ui-sref="{{item.state}}">{{item.title}}</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>

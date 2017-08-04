@@ -1,0 +1,15 @@
+
+  <table class="Table">
+    <thead class="Table-header">
+      <tr class="Table-rowHeader">
+        <th class="Table-itemHeader">Id</th>
+        <th class="Table-itemHeader">Nombre</th>
+      </tr>
+    </thead>
+    <tbody class="Table-body">
+      <tr class="Table-rowBody" ng-repeat="item in vm.countries">
+        <td class="Table-itemBody">{{item.id}}</td>
+        <td class="Table-itemBody">{{item.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>
